@@ -1,4 +1,5 @@
-import AppShell from '@/components/layouts/layouts/AppShell'
+
+import AppShell from '@/components/layouts/AppShell'
 import '@/styles/globals.css'
 
 export default function App({ Component, pageProps }) {
