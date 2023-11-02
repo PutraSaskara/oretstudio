@@ -6,12 +6,17 @@ const inter = Inter({ subsets: ['latin'] })
 import React from 'react'
 import Comp1 from '@/components/layouts/component_1/page'
 import Comp2 from '@/components/layouts/component_2/page'
+import Link from 'next/link'
 
 const index = () => {
   return (
     <div>
-      <Comp1/>
-      <Comp2/>
+      <h1>Products</h1>
+      <br/>
+      <Link href={'/products/men'} >Mens Product</Link>
+      <br/>
+      <Link href={'/products/women'}>Womens Product</Link>
+      
     </div>
   )
 }
