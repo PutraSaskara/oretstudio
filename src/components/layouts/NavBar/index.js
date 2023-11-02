@@ -41,7 +41,7 @@ function NavBar() {
         <div
         className={`flex-1 block justify-self-center pb-3 md:pb-0 md:mt-0 absolute bg-white w-[100%] h-[100%] ${
             navbar ? ' md:p-0 block' : 'hidden'
-          }`}
+        }`}
         >
             <div className='w-full'>
                 <ul>
@@ -54,7 +54,7 @@ function NavBar() {
                 <SearchBar/>
             </div>
     </div>
-  )
+    )
 }
 
 export default NavBar

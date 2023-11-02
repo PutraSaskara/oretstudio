@@ -26,7 +26,7 @@ const ImageCarousel = () => {
 
   return (
     <div>
-      <div className="relative w-1716 h-793 rounded-lg overflow-hidden mx-24">
+      <div className="w-1716 h-793 rounded-lg overflow-hidden mx-24">
         {imageUrls.map((url, index) => (
           <img
             key={index}
