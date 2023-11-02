@@ -7,6 +7,7 @@ import React from 'react'
 import Comp1 from '@/components/layouts/component_1/page'
 import Comp2 from '@/components/layouts/component_2/page'
 import Carousel from '@/components/layouts/ImageCarosel/page'
+import ImageCarosel from '@/components/layouts/ImageCarosel/page'
 
 
 const index = () => {
@@ -22,7 +23,7 @@ const index = () => {
     <div>
       <Comp1/>
       <Comp2/>
-      <Carousel images={images} />
+      <ImageCarosel/>
       
     </div>
   )
