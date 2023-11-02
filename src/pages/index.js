@@ -26,6 +26,7 @@ const index = () => {
   return (
     <div>
       <ImageCarosel/>
+      <h1>TESSSSSSSSSS</h1>
     </div>
   )
 }
