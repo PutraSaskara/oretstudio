@@ -15,7 +15,8 @@ function NavBar() {
     const [search, setSearch] = useState(false)
   return (
     <div>
-    <div className="py-10 px-4">
+        {/* phone & tab view */}
+        <div className="py-10 px-4 lg:hidden">
         <div className="m-auto flex justify-between">
             <button className='active:bg-blue-200' onClick={() => setNavbar(!navbar)} >
                 {navbar ? (
@@ -52,6 +53,24 @@ function NavBar() {
         </div>
             <div className={`flex bg-white justify-center w-full absolute ${search ? 'block' : 'hidden'}`}>
                 <SearchBar/>
+            </div>
+
+            {/* web view */}
+
+            <div className='py-10 px-4 lg:flex hidden'>
+                <div className='m-auto flex justify-between'>
+                    <button><Image src="/oretLogo.png" alt="me" width="100" height="100" /></button>
+                        <button className='m-5 font-semibold'>HOME</button>
+                        <button className='m-5 font-semibold'>MEN</button>
+                        <button className='m-5 font-semibold'>WOMEN</button>
+                        <button className='m-5 font-semibold'>KIDS</button>
+                        <button className='m-5 font-semibold'>CLOTHING</button>
+                        <button className='mx-5 font-semibold'>ACCESORIES</button>
+
+                    <button><HiOutlineShoppingBag style={{fontSize: 30}}/></button>
+                    <button className='m-5 font-semibold rounded-xl bg-black text-white px-3 py-2'>SIGN IN OR JOIN NOW</button>
+
+                </div>
             </div>
     </div>
     )
