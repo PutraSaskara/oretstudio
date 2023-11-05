@@ -44,8 +44,8 @@ const ImageCarousel = () => {
         {imageUrls.map((_, index) => (
           <BsDot
             key={index}
-            className={`text-gray-50 text-3xl cursor-pointer ${
-              index === activeIndex ? "text-gray-400" : ""
+            className={` text-gray-400 text-5xl cursor-pointer ${
+              index === activeIndex ? " text-gray-600" : ""
             }`}
             onClick={() => handleDotClick(index)}
           />

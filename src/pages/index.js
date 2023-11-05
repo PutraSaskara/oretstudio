@@ -11,6 +11,10 @@ import Link from 'next/link'
 
 import Carousel from '@/components/layouts/ImageCarosel/page'
 import ImageCarosel from '@/components/layouts/ImageCarosel/page'
+import { ImageCard } from '@/components/layouts/ImageCard/page'
+import MenSection from '@/components/layouts/MenSection/page'
+import TrendCard from '@/components/layouts/TrendCard/page'
+import NewTrendSection from '@/components/layouts/NewTrendSection/page'
 
 
 
@@ -26,7 +30,9 @@ const index = () => {
   return (
     <div>
       <ImageCarosel/>
-      <h1>TESSSSSSSSSS</h1>
+      <NewTrendSection/>
+      <MenSection/>
+      
     </div>
   )
 }
