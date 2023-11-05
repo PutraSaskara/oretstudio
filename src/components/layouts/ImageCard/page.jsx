@@ -4,7 +4,7 @@ const ImageCard = (props) => {
   const { title, price, colors, imageUrl } = props;
 
   return (
-    <div className="relative w-[264px] h-[439px] bg-slate-400">
+    <div className="relative w-[264px] h-[439px] ">
       <div className="absolute w-[264px] h-[23px] top-[350px] left-0">
         <p className="absolute w-[263px] h-[21px] top-0 left-0 [font-family:'Heebo-Medium',Helvetica] font-medium text-[#202020] text-[14px] tracking-[0.98px] leading-[23.1px] whitespace-nowrap">
           {title}

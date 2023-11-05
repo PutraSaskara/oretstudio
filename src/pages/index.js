@@ -15,6 +15,7 @@ import { ImageCard } from '@/components/layouts/ImageCard/page'
 import MenSection from '@/components/layouts/MenSection/page'
 import TrendCard from '@/components/layouts/TrendCard/page'
 import NewTrendSection from '@/components/layouts/NewTrendSection/page'
+import HomePage from '@/components/layouts/Homepage/page'
 
 
 
@@ -29,9 +30,7 @@ const index = () => {
   ];
   return (
     <div>
-      <ImageCarosel/>
-      <NewTrendSection/>
-      <MenSection/>
+      <HomePage/>
       
     </div>
   )

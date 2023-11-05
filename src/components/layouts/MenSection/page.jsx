@@ -26,6 +26,12 @@ const imageCardData = [
     colors: "7 colors",
     imageUrl: "https://ik.imagekit.io/m1akscp5q/abybs00378_billabong,l_alt_frt1.jpg.png?updatedAt=1699074802415",
   },
+  {
+    title: "Product 3",
+    price: "$39.99",
+    colors: "7 colors",
+    imageUrl: "https://ik.imagekit.io/m1akscp5q/abybs00378_billabong,l_alt_frt1.jpg.png?updatedAt=1699074802415",
+  },
 ];
 
 const MenSection = () => {
