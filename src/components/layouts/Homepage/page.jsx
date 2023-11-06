@@ -8,8 +8,7 @@ const HomePage = () => {
     <div>
         <ImageCarousel/>
         <NewTrendSection/>
-        <MenSection/>
-      
+        <MenSection/> 
     </div>
   )
 }
