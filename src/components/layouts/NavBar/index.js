@@ -10,38 +10,43 @@ import { useState } from 'react';
 import SearchBar from '../SearchBar'
 
 
+const menu = [
+    'HOME', 'MEN', 'WOMEN', 'KIDS', 'CLOTHING', 'ACCECORIES', 'STORES', 'ACCOUNT', 'CONTACT', 'ABOUT'
+]
+
+
 function NavBar() {
     const [navbar, setNavbar] = useState(false);
     const [search, setSearch] = useState(false)
-  return (
+    return (
     <div>
-    <div className="py-10 px-4">
+    <div className="py-10 px-4 lg:hidden">
         <div className="m-auto flex justify-between">
             <button className='active:bg-blue-200' onClick={() => setNavbar(!navbar)} >
                 {navbar ? (
-                    <GrClose style={{fontSize: 50}}/>
+                    <GrClose style={{fontSize: 40}}/>
                     
                 ) : (
-                    <FiMenu style={{fontSize: 50}}/>
+                    <FiMenu style={{fontSize: 40}}/>
                 )}
             </button>
             <button onClick={() => setSearch(!search)}>
                 {search ? (
-                    <BiSearch style={{fontSize: 50}}/>
+                    <BiSearch style={{fontSize: 40}}/>
                 ) : (
-                    <BiSearch style={{fontSize: 50}}/>
+                    <BiSearch style={{fontSize: 40}}/>
                 )}
             </button>
             <button><Image src="/oretLogo.png" alt="me" width="100" height="100" /></button>
-            <button><HiOutlineShoppingBag style={{fontSize: 50}}/></button>
-            <button><BsPerson style={{fontSize: 50}}/></button>
+            <button><HiOutlineShoppingBag style={{fontSize: 40}}/></button>
+            <button><BsPerson style={{fontSize: 40}}/></button>
         </div>
 
     </div>
         <div
         className={`flex-1 block justify-self-center pb-3 md:pb-0 md:mt-0 absolute bg-white w-[100%] h-[100%] ${
             navbar ? ' md:p-0 block' : 'hidden'
-          }`}
+        }`}
         >
             <div className='w-full'>
                 <ul>
@@ -53,8 +58,41 @@ function NavBar() {
             <div className={`flex bg-white justify-center w-full absolute ${search ? 'block' : 'hidden'}`}>
                 <SearchBar/>
             </div>
+
+            {/* web view */}
+
+            <div className='py-10 px-4 lg:flex hidden'>
+                <div className='m-auto flex justify-between w-full px-10'>
+                    <div className='flex w-[90%] overflow-auto'>
+                    <div className='flex'>
+                        <button><Image src="/oretLogo.png" alt="me" width="150" height="150" /></button>
+                    </div>
+
+                    <div className='flex items-center overflow-hidden mr-5 hover:overflow-x-scroll'>
+                        {
+                            menu.map((item) => (
+                                <button className='m-5 p-1 font-semibold'>
+                                    {item}
+                                </button>
+                            ))
+                        }
+                    </div>
+
+                    </div>
+                    
+
+                    <div className='flex justify-end'>
+                        <button><HiOutlineShoppingBag style={{fontSize: 30}}/></button>
+                        <button className='m-5 font-semibold rounded-xl bg-black text-white px-3 py-2 text-sm'>SIGN IN OR JOIN NOW</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            {/* end web view */}
     </div>
-  )
+    )
 }
 
 export default NavBar
