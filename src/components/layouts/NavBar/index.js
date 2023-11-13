@@ -46,9 +46,9 @@ function NavBar() {
               <BiSearch style={{ fontSize: 40 }} />
             )}
           </button>
-          <button>
+          <Link href={'/'}>
             <Image src="/oretLogo.png" alt="me" width="100" height="100" />
-          </button>
+          </Link>
           <button>
             <HiOutlineShoppingBag style={{ fontSize: 40 }} />
           </button>
@@ -87,9 +87,9 @@ function NavBar() {
         <div className="m-auto flex justify-between w-full px-10">
           <div className="flex w-[90%] overflow-auto">
             <div className="flex">
-              <button>
+              <Link href={'/'}>
                 <Image src="/oretLogo.png" alt="me" width="150" height="150" />
-              </button>
+              </Link>
             </div>
 
             <div className="flex items-center overflow-hidden mr-5 hover:overflow-x-scroll">
