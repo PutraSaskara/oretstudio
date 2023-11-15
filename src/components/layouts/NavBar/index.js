@@ -4,18 +4,14 @@ import { BiSearch } from "react-icons/bi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { BsPerson } from "react-icons/bs";
 import { GrClose } from "react-icons/gr";
-import { AiOutlineHome } from "react-icons/ai";
 import Image from "next/image";
 import { useState } from "react";
 import SearchBar from "../SearchBar";
+import DropDown from "../DropDown/page";
 
 const menu = [
   "HOME",
   "MEN",
-  "WOMEN",
-  "KIDS",
-  "CLOTHING",
-  "ACCECORIES",
   "STORES",
   "ACCOUNT",
   "CONTACT",
@@ -25,6 +21,7 @@ const menu = [
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const [search, setSearch] = useState(false);
+  const [dropdown, setDropDown] = useState(false)
   return (
     <div>
       <div className="py-10 px-4 lg:hidden">
@@ -83,27 +80,29 @@ function NavBar() {
 
       {/* web view */}
 
-      <div className="py-10 px-4 lg:flex hidden">
+      <div className="py-10 relative px-4 lg:flex hidden">
         <div className="m-auto flex justify-between w-full px-10">
-          <div className="flex w-[90%] overflow-auto">
+          <div className="flex w-[90%]">
             <div className="flex">
               <Link href={'/'}>
                 <Image src="/oretLogo.png" alt="me" width="150" height="150" />
               </Link>
             </div>
 
-            <div className="flex items-center overflow-hidden mr-5 hover:overflow-x-scroll">
-              {menu.map((item) => (
-                <button className="m-5 p-1 font-semibold">{item}</button>
-              ))}
+            <div className="flex items-center xl:justify-center w-[70%] lg:mx-0 lg:justify-start xl:mx-auto ">
+                <button className="m-5 p-1 font-semibold ">HOME</button>
+                <DropDown className="bg-yellow-500"/>
+                <button className="m-5 p-1 font-semibold ">STORES</button>
+                <button className="m-5 p-1 font-semibold ">ACCOUNT</button>
+                <button className="m-5 p-1 font-semibold ">ABOUT</button>
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end">    
             <button>
               <HiOutlineShoppingBag style={{ fontSize: 30 }} />
             </button>
-            <button className="m-5 font-semibold rounded-xl bg-black text-white px-3 py-2 text-sm">
+            <button className="m-5 w-40 font-semibold rounded-xl bg-black text-white px-3 py-2 text-xs">
               SIGN IN OR JOIN NOW
             </button>
           </div>
