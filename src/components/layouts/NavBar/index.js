@@ -55,7 +55,7 @@ function NavBar() {
         </div>
       </div>
       <div
-        className={`flex-1 block justify-self-center pb-3 md:pb-0 md:mt-0 absolute bg-white w-[100%] h-[100%] ${
+        className={`flex-1 block justify-self-center pb-3 md:pb-0 md:mt-0 absolute bg-white w-[100%] h-[100%] z-50 ${
           navbar ? " md:p-0 block" : "hidden"
         }`}
       >
@@ -90,7 +90,7 @@ function NavBar() {
             </div>
 
             <div className="flex items-center xl:justify-center w-[70%] lg:mx-0 lg:justify-start xl:mx-auto ">
-                <button className="m-5 p-1 font-semibold ">HOME</button>
+                <Link href={'/'}><button className="m-5 p-1 font-semibold ">HOME</button></Link>
                 <DropDown className="bg-yellow-500"/>
                 <button className="m-5 p-1 font-semibold ">STORES</button>
                 <button className="m-5 p-1 font-semibold ">ACCOUNT</button>
@@ -100,10 +100,14 @@ function NavBar() {
 
           <div className="flex justify-end">    
             <button>
-              <HiOutlineShoppingBag style={{ fontSize: 30 }} />
+              <Link href={"/CartPage"}>
+                <HiOutlineShoppingBag style={{ fontSize: 30 }} />
+              </Link>
             </button>
             <button className="m-5 w-40 font-semibold rounded-xl bg-black text-white px-3 py-2 text-xs">
-              SIGN IN OR JOIN NOW
+              <Link href={"/#"}>
+                SIGN IN OR JOIN NOW
+              </Link>
             </button>
           </div>
         </div>
