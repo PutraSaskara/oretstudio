@@ -9,14 +9,6 @@ import { useState } from "react";
 import SearchBar from "../SearchBar";
 import DropDown from "../DropDown/page";
 
-const menu = [
-  "HOME",
-  "MEN",
-  "STORES",
-  "ACCOUNT",
-  "CONTACT",
-  "ABOUT",
-];
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);

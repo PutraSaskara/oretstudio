@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState } from 'react'
 import { FaChevronDown, FaChevronUp  } from "react-icons/fa6";
 
@@ -33,49 +34,49 @@ const DropDown = () => {
                     <div className="origin-top-right absolute left-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                             <li>
-                                <a
-                                    href="#"
+                                <Link
+                                    href="/products/men"
                                     className="block px-4 py-2 text-sm font-semibold hover:bg-gray-100"
                                     onClick={() => handleItemClick('MEN')}
                                 >
                                     MEN
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#"
                                     className="block px-4 py-2 text-sm font-semibold hover:bg-gray-100"
                                     onClick={() => handleItemClick('WOMEN')}
                                 >
                                     WOMEN
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#"
                                     className="block px-4 py-2 text-sm font-semibold hover:bg-gray-100"
                                     onClick={() => handleItemClick('KIDS')}
                                 >
                                     KIDS
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#"
                                     className="block px-4 py-2 text-sm font-semibold hover:bg-gray-100"
                                     onClick={() => handleItemClick('ACCECORIES')}
                                 >
                                     ACCECORIES
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
+                                <Link
                                     href="#"
                                     className="block px-4 py-2 text-sm font-semibold hover:bg-gray-100"
                                     onClick={() => handleItemClick('CLOTHING')}
                                 >
                                     CLOTHING
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
